@@ -1,0 +1,43 @@
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: column;
+    height: 40vh;
+    width: 100%;
+  }
+  
+  .title {
+    font-size: 8vw;
+    text-transform: uppercase;
+    font-family: "Montserrat", sans-serif;
+  }
+
+  .inputs {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+  }
+  
+  .search {
+    width: 43%;
+  }
+  
+  .select {
+    width: 43%;
+  }
+
+  @media (max-width: 900px) {
+    .header {
+      justify-content: space-evenly;
+      height: 25vh;
+      padding-bottom: 40px;
+    }
+    .title {
+      font-size: 8vw;
+      height: 20vh;
+      padding-top: 50px;
+    }
+  }
+
+  
