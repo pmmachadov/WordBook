@@ -1,3 +1,6 @@
+# WordBook
+A word book created using React and axios, which fetches data from the dictionary api based on the word we provide in a specified language, returning all the different meanings and their examples (iff)
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
