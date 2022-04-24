@@ -1,28 +1,12 @@
 # WordBook
 A word book created using React and axios, which fetches data from the dictionary api based on the word we provide in a specified language, returning all the different meanings and their examples (iff)
 
-# Getting Started with WordBook
+## 🤝🏻 &nbsp;Connect with Me
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
-## Available Scripts
-
-In the project directory, you can run:
-
-### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+<p align="left">
+<a href="https://www.linkedin.com/in/zahrashahid/"><img src="https://img.shields.io/badge/-Zahra%20Shahid-0077B5?style=flat&logo=Linkedin&logoColor=white"/></a>
+<a href="mailto:zashahid45@gmail.com"><img src="https://img.shields.io/badge/-zashahid45@gmail.com-D14836?style=flat&logo=Gmail&logoColor=white"/></a>
+<a href="https://www.instagram.com/zash_45/"><img src="https://img.shields.io/badge/-@zash_45-E4405F?style=flat&logo=Instagram&logoColor=white"/></a>
+<a href="https://leetcode.com/zashahid45/"><img src="https://img.shields.io/badge/-Zahra%20Shahid-00000?style=flat&logo=Leetcode&logoColor=yellow"/></a>
+<a href="https://www.facebook.com/zahra.shahid.5623"><img src="https://img.shields.io/badge/-@ZahraShahid-1877F2?style=flat&logo=Facebook&logoColor=white"/></a>
+</p>
