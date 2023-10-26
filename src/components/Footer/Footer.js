@@ -4,13 +4,13 @@ import "./Footer.css";
 const Footer = (LightTheme) => {
   return (
     <div className="footer">
-      <hr style={{
+      <hr style={ {
         width: "90%", marginTop: 20,
         backgroundColor: LightTheme ? "#3b5360" : "white",
         color: LightTheme ? "white" : "black",
-      }}/>
+      } } />
       <span className="name">
-        Made by{" Zahra Shahid "}
+        Made by{ " pmmachadov@gmail.com " }
       </span>
     </div>
   );
