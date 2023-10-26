@@ -1,61 +1,26 @@
 import React from "react";
+
 import "./Header.css";
-
-import { createTheme, TextField, ThemeProvider } from "@mui/material";
-import MenuItem from "@mui/material/MenuItem";
-
-import categories from "../../data/category";
+import { TextField } from "@mui/material";
 
 
-const Header = ({category, setCategory, word, setWord, LightTheme}) => {
-    const darkTheme = createTheme({
-        palette: {
-          primary:{
-            main: LightTheme ? "#000" : "#fff",
-            color: LightTheme ? "#000" : "#fff"
-          },
-          type: LightTheme ? "light" : "dark",
-        },
-      });
+const Header = ({ word, setWord }) => {
 
-      //handles when the language is changed sets word to none.
-      const handlechange=(language) =>{
-        setCategory(language);
-        setWord("");
-      }
-
-    return (
-      <div className="header">
-        <span className="title">{word ? word : "Word Book"}</span>
-        <div className="inputs">
-        <ThemeProvider theme={darkTheme}>
-           <TextField 
-           id="standard-basic" 
-           variant="standard"
-           value={word}
-           onChange={(e)=>setWord(e.target.value)}
-           className="search"
-           label="Search a Word"
-            />
-           <TextField
-          id="standard-select-currency"
-          select
-          label="Language"
-          value={category}
-          onChange={(e)=> handlechange(e.target.value)}
-          variant="standard"
-          className="select"
-        >
-            {categories.map((option)=> (
-                <MenuItem key={option.label} value={option.label}>
-                {option.value}
-              </MenuItem>
-            ))}
-         </TextField>
-        </ThemeProvider>
-        </div>
+  return (
+    <div className="header">
+      <span className="title">{ word ? word : "Diccionari" }</span>
+      <div className="inputs">
+        <TextField
+          id="standard-basic"
+          variant="filled"
+          value={ word }
+          onChange={ (e) => setWord(e.target.value) }
+          className="search"
+          label="Search a Word"
+        />
       </div>
-    );
-  };
-  
-  export default Header;
+    </div>
+  );
+}
+
+export default Header;
