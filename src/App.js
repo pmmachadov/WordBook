@@ -10,24 +10,24 @@ import Header from "./components/Header/Header";
 import Definitions from "./components/Definitions/Definitions";
 import Footer from "./components/Footer/Footer";
 
-function App() {
+function App () {
   const [word, setWord] = useState("");
   const [meanings, setMeanings] = useState([]);
   const [category, setCategory] = useState("en");
   const [LightTheme, setLightTheme] = useState(false);
 
-  const dictionaryApi = async()=>{
-    try{
+  const dictionaryApi = async () => {
+    try {
       //get data for a specific word in a specific language using axios
       const data = await axios.get(`https://api.dictionaryapi.dev/api/v2/entries/${category}/${word}`)
       //extract data from the recieved object and set meanings
       setMeanings(data.data);
-    }catch(error){console.error();}
+    } catch (error) { console.error(); }
   };
   //renders when the component is mounted 
-  useEffect(() =>{
+  useEffect(() => {
     dictionaryApi();
-  // eslint-disable-next-line react-hooks/exhaustive-deps
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [word, category]);
 
   //switch
@@ -46,37 +46,39 @@ function App() {
   })(Switch);
 
   return (
-    <div className="App" 
-    style={{
-      height: "100vh", 
-      backgroundColor: LightTheme ? "#fff" : "#282c34",
-      color: LightTheme ? "black" : "white",
-      transition: "all 0.5s linear",
-    }}>
-      <Container 
-      maxWidth="md"
-      style={{display:"flex", flexDirection:"column", height:"100vh"}}
+    <div className="App"
+      style={ {
+        height: "100vh",
+        backgroundColor: LightTheme ? "#fff" : "#282c34",
+        color: LightTheme ? "black" : "white",
+        transition: "all 0.5s linear",
+      } }>
+      <Container
+        maxWidth="md"
+        style={ { display: "flex", flexDirection: "column", height: "100vh" } }
       >
-         <div
-          style={{ position: "absolute", top: 0, right: 15, paddingTop: 10, justifyContent:"space-evenly" }}
+        <div
+          style={ { position: "absolute", top: 0, right: 15, paddingTop: 10, justifyContent: "space-evenly" } }
         >
-          <span>{LightTheme ? "Dark" : "Light"} Mode</span>
+          <span>{ LightTheme ? "Dark" : "Light" } Mode</span>
           <DarkMode
-            checked={LightTheme}
-            onChange={() => setLightTheme(!LightTheme)}
+            checked={ LightTheme }
+            onChange={ () => setLightTheme(!LightTheme) }
           />
-        </div> 
-        <Header 
-        category={category} 
-        setCategory={setCategory} 
-        word={word} 
-        setWord={setWord}
-        LightTheme={LightTheme}/>
-        {meanings && 
-          <Definitions word={word} category={category} meanings={meanings} LightTheme={LightTheme}/>
+        </div>
+        <Header
+          category={ category }
+          setCategory={ setCategory }
+          word={ word }
+          setWord={ setWord }
+          LightTheme={ LightTheme }>
+          <a href="/learn-react">learn react</a>
+        </Header>
+        { meanings &&
+          <Definitions word={ word } category={ category } meanings={ meanings } LightTheme={ LightTheme } />
         }
-        <Footer/>
-        </Container>
+        <Footer />
+      </Container>
     </div>
   );
 }
